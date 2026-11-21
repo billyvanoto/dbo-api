@@ -19,7 +19,7 @@
 ### Key Architectural Highlights
 - **Authentication & Authorization:** Stateless JSON Web Tokens (JWT) passed via the `Authorization: Bearer <token>` HTTP header. User identity (`user_id`, `email`) is extracted via middleware and injected into the request context.
 - **Audit Trail Logging:** Every entity automatically tracks `created_at`, `created_by`, `updated_at`, and `updated_by` using the authenticated user's email from the JWT payload.
-- **Soft Deletion:** Records in `customers` and `orders` are never permanently removed via `DELETE` endpoints; instead, deletion timestamps and user emails are recorded (`delete_at`/`delete_by` and `deleted_at`/`deleted_by`), and active queries automatically filter them out.
+- **Soft Deletion:** Records in `customers` and `orders` are never permanently removed via `DELETE` endpoints; instead, deletion timestamps and user emails are recorded (`deleted_at`/`deleted_by`), and active queries automatically filter them out.
 - **Server-Side Integrity:** Order reference numbers (`orderNo`) are atomically generated via a PostgreSQL sequence (`ORD-YYYYMMDD-00001`), and all line-item and grand totals are computed server-side inside ACID database transactions.
 
 ---
@@ -406,7 +406,7 @@ Updates an existing active customer's details and sets `updatedBy` to the authen
 ---
 
 #### 6. Soft-Delete Customer
-Marks an active customer as deleted by populating `delete_at` with the current timestamp and `delete_by` with the authenticated user's email.
+Marks an active customer as deleted by populating `deleted_at` with the current timestamp and `deleted_by` with the authenticated user's email.
 
 - **Endpoint:** `DELETE /api/v1/customers/:id`
 - **Authentication:** Bearer Token Required
@@ -565,7 +565,7 @@ Creates a new order and its line items inside an ACID transaction. `orderNo` is 
 **Request Body Parameters:**
 | Field | Type | Required | Validation / Constraints |
 | :--- | :--- | :--- | :--- |
-| `customerId` | `uint` | Yes | Must reference an existing active customer (`delete_at IS NULL`) |
+| `customerId` | `uint` | Yes | Must reference an existing active customer (`deleted_at IS NULL`) |
 | `status` | `string` | No | Defaults to `PENDING`. Allowed: `PENDING`, `PAID`, `SHIPPED`, `CANCELLED` |
 | `items` | `array` | Yes | Minimum 1 item (`min=1`) |
 | `items[].name` | `string` | Yes | Item/product name (max 50 characters) |
@@ -658,7 +658,7 @@ Updates an existing active order's customer, status, and line items inside an at
 **Request Body Parameters:**
 | Field | Type | Required | Validation / Constraints |
 | :--- | :--- | :--- | :--- |
-| `customerId` | `uint` | Yes | Must reference an existing active customer (`delete_at IS NULL`) |
+| `customerId` | `uint` | Yes | Must reference an existing active customer (`deleted_at IS NULL`) |
 | `status` | `string` | Yes | Allowed: `PENDING`, `PAID`, `SHIPPED`, `CANCELLED` |
 | `items` | `array` | Yes | Minimum 1 item (`min=1`) |
 | `items[].name` | `string` | Yes | Item/product name (max 50 characters) |
