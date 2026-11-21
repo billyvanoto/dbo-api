@@ -22,9 +22,9 @@ dbo-api/
 ├── config/
 │   └── database.go              # PostgreSQL connection setup
 ├── controllers/
-│   ├── auth.go       # Register, Login, Get Current User
-│   ├── customer.go   # Customer CRUD, Pagination, Search, Options, Soft Delete
-│   └── order.go      # Order + Items CRUD, Pagination, Search, Auto OrderNo, Soft Delete
+│   ├── auth.go                  # Register, Login, Get Current User
+│   ├── customer.go              # Customer CRUD, Pagination, Search, Options, Soft Delete
+│   └── order.go                 # Order + Items CRUD, Pagination, Search, Auto OrderNo, Soft Delete
 ├── middlewares/
 │   └── jwt-middleware.go        # Bearer JWT validation & user context injection
 ├── migrations/
@@ -44,3 +44,31 @@ dbo-api/
 ├── docker-compose.yml           # App + PostgreSQL service orchestration
 ├── go.mod
 └── main.go                      # Entry point with /health check & graceful shutdown
+```
+---
+
+## Getting Started
+
+- Clone this repository
+- Copy `.env.example` to `.env`
+- Run docker
+  ```bash
+  docker compose up -d --build
+  ```
+- Verify both container running by
+  ```bash
+  docker compose ps
+  curl http://localhost:8080/health
+  ```
+  the response should be
+  ```json
+    {
+        "db": "connected",
+        "status": "ok"
+    }
+  ```
+
+  ---
+  ## Documentation
+
+  API Collection and ERD design available in `docs` folder.

@@ -9,7 +9,7 @@ type Order struct {
 	OrderNo    string      `gorm:"column:order_no;uniqueIndex;size:50;not null" json:"orderNo"`
 	Total      float64     `gorm:"column:total;type:numeric(15,2);not null;default:0.00" json:"total"`
 	Status     string      `gorm:"column:status;size:20;not null;default:'PENDING'" json:"status"`
-	Items      []OrderItem `gorm:"foreignKey:OrderID;references:OrderID" json:"items"`
+	Items      []OrderItem `gorm:"foreignKey:OrderID;references:OrderID" json:"items,omitempty"`
 	CreatedAt  time.Time   `gorm:"column:created_at" json:"createdAt"`
 	CreatedBy  string      `gorm:"column:created_by;not null;default:'SYSTEM'" json:"createdBy"`
 	UpdatedAt  time.Time   `gorm:"column:updated_at" json:"updatedAt"`

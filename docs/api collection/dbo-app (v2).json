@@ -1,0 +1,1496 @@
+{
+  "info": {
+    "name": "dbo-app",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "Manage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers?search=&page=1&limit=10",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example empty",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 08:24:04 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "52",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": null,\n  \"meta\": {\n    \"limit\": 10,\n    \"page\": 1,\n    \"total\": 0\n  }\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers?page=1&limit=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": ""
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 09:27:09 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "748",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": 7,\n      \"name\": \"Customer 4\",\n      \"email\": \"customer4@customer4.id\",\n      \"phone\": \"+628218888891\",\n      \"address\": \"This is an example of address no 4\",\n      \"createdAt\": \"2026-11-20T09:19:43.625803Z\"\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Customer 3\",\n      \"email\": \"customer3@customer3.id\",\n      \"phone\": \"+628218888890\",\n      \"address\": \"This is an example of address no 3\",\n      \"createdAt\": \"2026-11-20T09:12:46.39762Z\"\n    },\n    {\n      \"id\": 4,\n      \"name\": \"Customer 2\",\n      \"email\": \"customer2@customer2.id\",\n      \"phone\": \"+628218888889\",\n      \"address\": \"This is an example of address no 1\",\n      \"createdAt\": \"2026-11-20T08:45:35.381551Z\"\n    },\n    {\n      \"id\": 1,\n      \"name\": \"Customer 1\",\n      \"email\": \"customer1@customer1.id\",\n      \"phone\": \"+628218888888\",\n      \"address\": \"This is an example of address no 2\",\n      \"createdAt\": \"2026-11-20T08:39:10.214061Z\"\n    }\n  ],\n  \"meta\": {\n    \"limit\": 10,\n    \"page\": 1,\n    \"total\": 4\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"jh.doe@jdcompany.id\",\n  \"phone\": \"+62821707171\",\n  \"address\": \"Street no 14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Customer 2\",\n  \"email\": \"customer2@customer2.id\",\n  \"phone\": \"+628218888889\",\n  \"address\": \"This is an example of address no 1\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 08:45:35 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "186",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": 4,\n    \"name\": \"Customer 2\",\n    \"email\": \"customer2@customer2.id\",\n    \"phone\": \"+628218888889\",\n    \"address\": \"This is an example of address no 1\",\n    \"createdAt\": \"2026-11-20T08:45:35.381551668Z\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "1"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Customer 1\",\n  \"email\": \"customer1@customer1.id\",\n  \"phone\": \"+628218888888\",\n  \"address\": \"Perum Kota, jl baru no 3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers",
+                    "1"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Customer 1\",\n  \"email\": \"customer1@customer1.id\",\n  \"phone\": \"+628218888888\",\n  \"address\": \"This is an example of address no 2\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 09:19:18 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "183",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Customer 1\",\n    \"email\": \"customer1@customer1.id\",\n    \"phone\": \"+628218888888\",\n    \"address\": \"This is an example of address no 2\",\n    \"createdAt\": \"2026-11-20T08:39:10.214061Z\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/10",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "10"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers/10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers",
+                    "10"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 21 Nov 2026 05:44:05 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "680",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": 10,\n    \"name\": \"Jen Lee\",\n    \"email\": \"jen.lee@ccompany.id\",\n    \"phone\": \"+62821707066\",\n    \"address\": \"Street no 18\",\n    \"orders\": [\n      {\n        \"orderId\": 5,\n        \"orderNo\": \"ORD-20261121-00005\",\n        \"total\": 1750000,\n        \"status\": \"PENDING\",\n        \"createdAt\": \"2026-11-21T05:04:36.184705Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-21T05:05:29.624491Z\",\n        \"updatedBy\": \"admin1@user.id\",\n        \"deletedAt\": \"2026-11-21T05:05:29.62403Z\",\n        \"deletedBy\": \"admin1@user.id\"\n      },\n      {\n        \"orderId\": 6,\n        \"orderNo\": \"ORD-20261121-00006\",\n        \"total\": 1750000,\n        \"status\": \"PENDING\",\n        \"createdAt\": \"2026-11-21T05:05:36.049147Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-21T05:05:36.049147Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      }\n    ],\n    \"createdAt\": \"2026-11-21T05:02:54.996019Z\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/7",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "7"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers/7",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers",
+                    "7"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 09:30:00 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "43",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Customer deleted successfully\"\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Options",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/options",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "options"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "3"
+                },
+                {
+                  "key": "search",
+                  "value": "Jack"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/customers/options?search=Jack",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "customers",
+                    "options"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "search",
+                      "value": "Jack"
+                    }
+                  ],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 16:21:57 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "59",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": 8,\n      \"name\": \"Jack\",\n      \"email\": \"jack@company.id\"\n    }\n  ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Manage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders?page=1&limit=10",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "search",
+                  "value": "00002"
+                },
+                {
+                  "key": "status",
+                  "value": "pending"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example empty",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders?page=1&limit=10&search=&status=",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    },
+                    {
+                      "key": "status",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 10:34:33 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "52",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": null,\n  \"meta\": {\n    \"limit\": 10,\n    \"page\": 1,\n    \"total\": 0\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": 4,\n  \"status\": \"CANCELLED\",\n  \"items\": [\n    {\n      \"name\": \"Paint\",\n      \"qty\": 5,\n      \"price\": 750000\n    },\n    {\n      \"name\": \"Pipe\",\n      \"qty\": 5,\n      \"price\": 50000\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": 1,\n  \"status\": \"PENDING\",\n  \"items\": [\n    {\n      \"name\": \"Paint\",\n      \"qty\": 5,\n      \"price\": 750000\n    },\n    {\n      \"name\": \"Pipe\",\n      \"qty\": 5,\n      \"price\": 50000\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 17:01:09 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "841",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"orderId\": 1,\n    \"customer\": {\n      \"id\": 1,\n      \"name\": \"Customer 1\",\n      \"email\": \"customer1@customer1.id\",\n      \"phone\": \"+628218888888\",\n      \"address\": \"Perum Kota, jl baru no 3\",\n      \"createdAt\": \"2026-11-20T08:39:10.214061Z\"\n    },\n    \"orderNo\": \"ORD-20261120-00001\",\n    \"total\": 4000000,\n    \"status\": \"PENDING\",\n    \"items\": [\n      {\n        \"orderItemId\": 1,\n        \"name\": \"Paint\",\n        \"qty\": 5,\n        \"price\": 750000,\n        \"total\": 3750000,\n        \"createdAt\": \"2026-11-20T17:01:09.587906Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-20T17:01:09.587906Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      },\n      {\n        \"orderItemId\": 2,\n        \"name\": \"Pipe\",\n        \"qty\": 5,\n        \"price\": 50000,\n        \"total\": 250000,\n        \"createdAt\": \"2026-11-20T17:01:09.587906Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-20T17:01:09.587906Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      }\n    ],\n    \"createdAt\": \"2026-11-20T17:01:09.585926Z\",\n    \"createdBy\": \"admin1@user.id\",\n    \"updatedAt\": \"2026-11-20T17:01:09.585926Z\",\n    \"updatedBy\": \"admin1@user.id\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/1",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "1"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": 6,\n  \"status\": \"PAID\",\n  \"items\": [\n    {\n      \"name\": \"Kitchen Sink\",\n      \"qty\": 4,\n      \"price\": 75000\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "1"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": 6,\n  \"status\": \"PENDING\",\n  \"items\": [\n    {\n      \"name\": \"Kitchen Sink\",\n      \"qty\": 4,\n      \"price\": 75000\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 17:02:14 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "642",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"orderId\": 1,\n    \"customer\": {\n      \"id\": 6,\n      \"name\": \"Customer 3\",\n      \"email\": \"customer3@customer3.id\",\n      \"phone\": \"+628218888890\",\n      \"address\": \"This is an example of address no 3\",\n      \"createdAt\": \"2026-11-20T09:12:46.39762Z\"\n    },\n    \"orderNo\": \"ORD-20261120-00001\",\n    \"total\": 300000,\n    \"status\": \"PENDING\",\n    \"items\": [\n      {\n        \"orderItemId\": 3,\n        \"name\": \"Kitchen Sink\",\n        \"qty\": 4,\n        \"price\": 75000,\n        \"total\": 300000,\n        \"createdAt\": \"2026-11-20T17:02:14.560031Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-20T17:02:14.560031Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      }\n    ],\n    \"createdAt\": \"2026-11-20T17:01:09.585926Z\",\n    \"createdBy\": \"admin1@user.id\",\n    \"updatedAt\": \"2026-11-20T17:02:14.56074Z\",\n    \"updatedBy\": \"admin1@user.id\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/3",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "3"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "3"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 16:05:05 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "845",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"orderId\": 3,\n    \"customer\": {\n      \"id\": 1,\n      \"name\": \"Customer 1\",\n      \"email\": \"customer1@customer1.id\",\n      \"phone\": \"+628218888888\",\n      \"address\": \"This is an example of address no 2\",\n      \"createdAt\": \"2026-11-20T08:39:10.214061Z\"\n    },\n    \"orderNo\": \"ORD-2026-002\",\n    \"total\": 1100000,\n    \"status\": \"PENDING\",\n    \"items\": [\n      {\n        \"orderItemId\": 3,\n        \"name\": \"Paint\",\n        \"qty\": 1,\n        \"price\": 750000,\n        \"total\": 750000,\n        \"createdAt\": \"2026-11-20T10:44:57.404875Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-20T10:44:57.404875Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      },\n      {\n        \"orderItemId\": 4,\n        \"name\": \"Pipe\",\n        \"qty\": 1,\n        \"price\": 350000,\n        \"total\": 350000,\n        \"createdAt\": \"2026-11-20T10:44:57.404875Z\",\n        \"createdBy\": \"admin1@user.id\",\n        \"updatedAt\": \"2026-11-20T10:44:57.404875Z\",\n        \"updatedBy\": \"admin1@user.id\"\n      }\n    ],\n    \"createdAt\": \"2026-11-20T10:44:57.404331Z\",\n    \"createdBy\": \"admin1@user.id\",\n    \"updatedAt\": \"2026-11-20T10:44:57.404331Z\",\n    \"updatedBy\": \"admin1@user.id\"\n  }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/5",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "5"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "response": [
+            {
+              "name": "example",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/6",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:8080"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "6"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "content-type",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 20 Nov 2026 16:07:12 GMT",
+                  "name": "date",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "content-length",
+                  "value": "40",
+                  "name": "content-length",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Order deleted successfully\"\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin2@user.id\",\n  \"name\": \"Admin 2\",\n  \"password\": \"abcd1234\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin2@user.id\",\n  \"name\": \"Admin 2\",\n  \"password\": \"abcd1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 20 Nov 2026 07:45:34 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "174",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"id\": 3,\n    \"name\": \"Admin 2\",\n    \"email\": \"admin2@user.id\",\n    \"CreatedAt\": \"2026-11-20T07:45:34.491583395Z\",\n    \"UpdatedAt\": \"2026-11-20T07:45:34.491583395Z\"\n  },\n  \"message\": \"User created\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin1@user.id\",\n  \"password\": \"abcd1234\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin1@user.id\",\n  \"password\": \"abcd1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 20 Nov 2026 08:19:54 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "358",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"token\": {\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY\",\n    \"type\": \"Bearer\",\n    \"expiresIn\": 1795249134\n  },\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Admin 1\",\n    \"email\": \"admin1@user.id\",\n    \"CreatedAt\": \"2026-11-20T07:43:11.198017Z\",\n    \"UpdatedAt\": \"2026-11-20T07:43:11.198017Z\"\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Validate Login State",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMUB1c2VyLmlkIiwiZXhwIjoxNzk1MjQ5MTM0LCJ1c2VyX2lkIjoxfQ.XARFiesBJlxgLFJKm1PF-PzRJsgRzCZIxTPslMgE_rY",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/auth/me",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "me"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/me",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "me"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 20 Nov 2026 08:21:35 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "143",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Admin 1\",\n    \"email\": \"admin1@user.id\",\n    \"CreatedAt\": \"2026-11-20T07:43:11.198017Z\",\n    \"UpdatedAt\": \"2026-11-20T07:43:11.198017Z\"\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/health",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "health"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/health",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "health"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 20 Nov 2026 16:57:47 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "32",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"db\": \"connected\",\n  \"status\": \"ok\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
